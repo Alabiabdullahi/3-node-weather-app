@@ -4,8 +4,9 @@ const hbs= require('hbs')
 const forecast= require('./Uils/forecast')
 const geocode= require('./Uils/geocode')
 
-console.log(__dirname)
+// console.log(__dirname)
 const app= express()
+const port=process.env.PORT || 3000
 
 
 // // CUSOM VIEWS DORECTORY:
@@ -138,6 +139,6 @@ app.get('*', (req, res)=>{
 })
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Server running on port 3000...')
 })
