@@ -12,7 +12,7 @@ const forecast=(latitude,longitude, callback)=>{
             callback(res.body.error,undefined)
         }else{
             callback(undefined,
-             res.body.current.weather_descriptions[0]+','+ 'it is currently '+res.body.current.temperature+'degrees out. '+'It feels like '+res.body.current.feelslike +" Out there." 
+             res.body.current.weather_descriptions[0]+','+ 'it is currently '+res.body.current.temperature+'degrees out. '+'It feels like '+res.body.current.feelslike +' degrees Out there.'+'The Humidity is ' + res.body.current.humidity + '%'
                 )
         }
     })
